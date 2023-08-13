@@ -20,4 +20,8 @@ app.get('/stuff', (req, res) => {
   })
 })
 
+app.post('/stuff', (req, res) => {
+  res.send("Post was successful")
+})
+
 app.listen(5000, () => {console.log("Server started on port 5000")})
