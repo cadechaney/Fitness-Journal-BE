@@ -60,7 +60,7 @@ app.delete('/stuff/:index', (req, res) => {
     } else {
       try {
         const existingData = JSON.parse(jsonString);
-        existingData.stuff.splice(index, 1);
+        existingData.splice(index, 1);
 
         fs.writeFile('./workouts.json', JSON.stringify(existingData, null, 2), 'utf-8', writeErr => {
           if (writeErr) {
