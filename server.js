@@ -22,8 +22,8 @@ app.get('/stuff', (req, res) => {
 });
 
 app.post('/stuff', (req, res) => {
-  const newData = req.body.workouts.stuff;
-  console.log('Received new data', newData);
+  const newWorkout = req.body.newWorkout;
+  console.log('Received new data', newWorkout);
 
   fs.readFile('./workouts.json', 'utf-8', (err, jsonString) => {
     if (err) {
@@ -32,7 +32,7 @@ app.post('/stuff', (req, res) => {
     } else {
       try {
         const existingData = JSON.parse(jsonString);
-        existingData.stuff = newData;
+        existingData.push(newWorkout)
 
         fs.writeFile('./workouts.json', JSON.stringify(existingData, null, 2), 'utf-8', writeErr => {
           if (writeErr) {
