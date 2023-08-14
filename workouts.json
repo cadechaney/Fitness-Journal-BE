@@ -1,22 +1,20 @@
-{
-  "stuff": [
-    {
-      "title": "Chest Day",
-      "date": "01-01-2023",
-      "description": "Ten sets of bench with dips and pushups",
-      "extra": "Did light cardio on the step mill afterwards"
-    },
-    {
-      "title": "Back Day",
-      "date": "01-02-2023",
-      "description": "1. Pull Ups-10x8 2. Dumbbell rows-4x8 @100lbs",
-      "extra": "Ate Crumble Cookie post workout"
-    },
-    {
-      "title": "Leg Day",
-      "Date": "01-03-2023",
-      "Description": "Lots of squats with 405lbs with leg extension dropsets",
-      "Extra": "Couldn't walk after so I went home and took a nap"
-    }
-  ]
-}
+[
+  {
+    "title": "Chest Day",
+    "date": "01-01-2023",
+    "description": "Ten sets of bench with dips and pushups",
+    "extra": "Did light cardio on the step mill afterwards"
+  },
+  {
+    "title": "Back Day",
+    "date": "01-02-2023",
+    "description": "1. Pull Ups-10x8 2. Dumbbell rows-4x8 @100lbs",
+    "extra": "Ate Crumble Cookie post workout"
+  },
+  {
+    "title": "Leg Day",
+    "Date": "01-03-2023",
+    "Description": "Lots of squats with 405lbs with leg extension dropsets",
+    "Extra": "Couldn't walk after so I went home and took a nap"
+  }
+]
