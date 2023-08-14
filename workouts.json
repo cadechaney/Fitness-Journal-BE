@@ -1,13 +1,10 @@
 {
   "stuff": [
     {
-      "this": "this"
+      "key": "that"
     },
     {
-      "that": "that"
-    },
-    {
-      "Another": "Another"
+      "key": "Another"
     },
     {
       "key": "value"
