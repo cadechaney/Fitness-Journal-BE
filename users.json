@@ -3,12 +3,12 @@
     "id": 1,
     "username": "bigman123",
     "password": "biceps4life",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MjMwNDcwMiwiZXhwIjoxNjkyMzA4MzAyfQ.cTlCL1Dh4Sb2gqO0rJJqVD_eGPHZUsT2d9Sl_R525fU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MjMwNTIxMywiZXhwIjoxNjkyMzA4ODEzfQ.oY99eP0ojQ0z_zlSkUm89ak45Q2QLWInV9vyPtfHae4"
   },
   {
     "id": 2,
     "username": "yogaFire",
     "password": "eternalStretch",
-    "token": ""
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjMwNTMxMSwiZXhwIjoxNjkyMzA4OTExfQ.UBL_V-h_0s5lrqUSn4KK9A0x9rMQOm1r09YptRnu4zw"
   }
 ]

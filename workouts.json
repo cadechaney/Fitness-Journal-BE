@@ -3,8 +3,23 @@
     "id": 1,
     "userId": 1,
     "title": "Back Day",
-    "date": "2023-01-02",
-    "description": "1. Pull Ups-10x8 2. Dumbbell rows-4x8 @100lbs",
-    "extra": "Ate Crumble Cookie post workout"
+    "date": "2023-08-18",
+    "description": "1. Pull ups- 5x10\n2. Rows - 3x8 @ 100lbs\n3. deadlift - 4x6 @ 405lbs",
+    "extra": ""
+  },
+  {
+    "userId": 1,
+    "title": "Leg Day",
+    "date": "2023-08-29",
+    "description": "Lots of squats with leg extension dropsets",
+    "extra": "Threw up after"
+  },
+  {
+    "id": 5,
+    "userId": 2,
+    "title": "Stretched",
+    "date": "2023-08-21",
+    "description": "Hamstring focused day for 2 hours straight",
+    "extra": "I don't feel anything any more"
   }
 ]
