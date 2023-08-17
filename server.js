@@ -16,7 +16,7 @@ app.post('/users/login', (req, res) => {
     const token = jwt.sign({ userId: user.id }, secretKey, { expiresIn: '1h' });
     user.token = token; // Update the user's token in memory
     updateUsersFile(users); // Update the users.json file
-    res.json({ token });
+    res.json({ token, user });
   } else {
     res.status(401).json({ error: 'Invalid credentials' });
   }
