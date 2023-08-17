@@ -3,12 +3,12 @@
     "id": 1,
     "username": "bigman123",
     "password": "biceps4life",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MjMwNTIxMywiZXhwIjoxNjkyMzA4ODEzfQ.oY99eP0ojQ0z_zlSkUm89ak45Q2QLWInV9vyPtfHae4"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MjMwODcwMywiZXhwIjoxNjkyMzEyMzAzfQ.gG7fASo0LKAyKbagUxvG8MKH-ft34KHraRzczlGddxI"
   },
   {
     "id": 2,
     "username": "yogaFire",
     "password": "eternalStretch",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjMwNTMxMSwiZXhwIjoxNjkyMzA4OTExfQ.UBL_V-h_0s5lrqUSn4KK9A0x9rMQOm1r09YptRnu4zw"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjMwODU4MywiZXhwIjoxNjkyMzEyMTgzfQ.qNIrRQtdu1aApCuXPm_LsiunuzdrP4UQkvYgvw7iNWI"
   }
 ]
