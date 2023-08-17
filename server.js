@@ -76,8 +76,8 @@ app.post('/stuff', (req, res) => {
   });
 });
 
-app.delete('/stuff/:index', (req, res) => {
-  const index = parseInt(req.params.index);
+app.delete('/stuff/:workoutId', (req, res) => {
+  const workoutId = parseInt(req.params.workoutId);
 
   fs.readFile('./workouts.json', 'utf-8', (err, jsonString) => {
     if (err) {
@@ -86,7 +86,14 @@ app.delete('/stuff/:index', (req, res) => {
     } else {
       try {
         const existingData = JSON.parse(jsonString);
-        existingData.splice(index, 1);
+        
+        const index = existingData.findIndex(workout => workout.id === workoutId)
+
+        if(index === -1) {
+          return res.status(404).json({error: 'Workout not found'})
+        }
+
+        existingData.splice(index, 1)
 
         fs.writeFile('./workouts.json', JSON.stringify(existingData, null, 2), 'utf-8', writeErr => {
           if (writeErr) {
