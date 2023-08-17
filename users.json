@@ -2,11 +2,13 @@
   {
     "id": 1,
     "username": "bigman123",
-    "password": "biceps4life"
+    "password": "biceps4life",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MjI5NTAwOCwiZXhwIjoxNjkyMjk4NjA4fQ.zDIaWYQvACKOlMFHQ9ygYD3x6U1f-kCX6oyKTIggN5E"
   },
   {
     "id": 2,
     "username": "yogaFire",
-    "password": "eternalStretch"
+    "password": "eternalStretch",
+    "token": ""
   }
 ]
