@@ -144,39 +144,67 @@ app.post('/users/signup', (req, res) => {
 });
 
 app.delete('/users/:userId', (req, res) => {
-  const userName = req.params.userId;
+  const userIdToDelete = req.params.userId;
 
-  fs.readFile('./users.json', 'utf-8', (err, jsonString) => {
+  fs.readFile('./users.json', 'utf-8', (err, usersJsonString) => {
     if (err) {
       console.log('Error reading file:', err);
       res.status(500).json({ error: 'An error occurred while reading the file' });
     } else {
       try {
-        const existingData = JSON.parse(jsonString);
-        
-        const index = existingData.findIndex(user => user.username === userName);
+        const existingUsersData = JSON.parse(usersJsonString);
 
-        if (index === -1) {
+        const userIndex = existingUsersData.findIndex(user => user.id === userIdToDelete);
+
+        if (userIndex === -1) {
           return res.status(404).json({ error: 'User not found' });
         }
 
-        existingData.splice(index, 1);
+        // Deleting user's account
+        existingUsersData.splice(userIndex, 1);
 
-        fs.writeFile('./users.json', JSON.stringify(existingData, null, 2), 'utf-8', writeErr => {
-          if (writeErr) {
-            console.error('Error writing to users.json:', writeErr);
-            res.status(500).json({ error: 'An error occurred while writing to file' });
+        fs.readFile('./workouts.json', 'utf-8', (workoutsErr, workoutsJsonString) => {
+          if (workoutsErr) {
+            console.log('Error reading workouts file:', workoutsErr);
+            res.status(500).json({ error: 'An error occurred while reading the file' });
           } else {
-            res.json({ message: `User at index ${index} deleted successfully`, users: existingData });
+            try {
+              const existingWorkoutsData = JSON.parse(workoutsJsonString);
+
+              // Delete all workouts associated with the user
+              const updatedWorkoutsData = existingWorkoutsData.filter(workout => workout.userId !== userIdToDelete);
+
+              // Write updated workouts data back to the file
+              fs.writeFile('./workouts.json', JSON.stringify(updatedWorkoutsData, null, 2), 'utf-8', writeErr => {
+                if (writeErr) {
+                  console.error('Error writing to workouts.json:', writeErr);
+                  res.status(500).json({ error: 'An error occurred while writing to file' });
+                } else {
+                  // Write updated users data back to the file
+                  fs.writeFile('./users.json', JSON.stringify(existingUsersData, null, 2), 'utf-8', usersWriteErr => {
+                    if (usersWriteErr) {
+                      console.error('Error writing to users.json:', usersWriteErr);
+                      res.status(500).json({ error: 'An error occurred while writing to file' });
+                    } else {
+                      res.json({ message: `User at index ${userIndex} and associated workouts deleted successfully`, users: existingUsersData });
+                    }
+                  });
+                }
+              });
+            } catch (workoutsParseErr) {
+              console.log('Error parsing workouts JSON:', workoutsParseErr);
+              res.status(500).json({ error: 'An error occurred while parsing JSON' });
+            }
           }
         });
-      } catch (parseErr) {
-        console.log('Error parsing JSON:', parseErr);
+      } catch (usersParseErr) {
+        console.log('Error parsing users JSON:', usersParseErr);
         res.status(500).json({ error: 'An error occurred while parsing JSON' });
       }
     }
   });
 });
+
 
 app.listen(5000, () => {
   console.log('Server started on port 5000');
