@@ -143,6 +143,41 @@ app.post('/users/signup', (req, res) => {
   res.status(201).json({ message: 'User registered successfully', token, user: newUser });
 });
 
+app.delete('/users/:userId', (req, res) => {
+  const userId = req.params.userId;
+
+  fs.readFile('./users.json', 'utf-8', (err, jsonString) => {
+    if (err) {
+      console.log('Error reading file:', err);
+      res.status(500).json({ error: 'An error occurred while reading the file' });
+    } else {
+      try {
+        const existingData = JSON.parse(jsonString);
+        
+        const index = existingData.findIndex(user => user.id === userId);
+
+        if (index === -1) {
+          return res.status(404).json({ error: 'User not found' });
+        }
+
+        existingData.splice(index, 1);
+
+        fs.writeFile('./users.json', JSON.stringify(existingData, null, 2), 'utf-8', writeErr => {
+          if (writeErr) {
+            console.error('Error writing to users.json:', writeErr);
+            res.status(500).json({ error: 'An error occurred while writing to file' });
+          } else {
+            res.json({ message: `User at index ${index} deleted successfully`, users: existingData });
+          }
+        });
+      } catch (parseErr) {
+        console.log('Error parsing JSON:', parseErr);
+        res.status(500).json({ error: 'An error occurred while parsing JSON' });
+      }
+    }
+  });
+});
+
 app.listen(5000, () => {
   console.log('Server started on port 5000');
 });

@@ -1,25 +1,8 @@
 [
   {
-    "id": 1,
-    "username": "bigman123",
-    "password": "biceps4life",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MjMwODcwMywiZXhwIjoxNjkyMzEyMzAzfQ.gG7fASo0LKAyKbagUxvG8MKH-ft34KHraRzczlGddxI"
-  },
-  {
-    "id": 2,
-    "username": "yogaFire",
-    "password": "eternalStretch",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjMyMTEwMCwiZXhwIjoxNjkyMzI0NzAwfQ.msqXT_v3plD894UI6zWwtC7glR0dlZ0TzW3ufZh14u0"
-  },
-  {
-    "id": "llfv33b2-zzj99",
+    "id": "llgkkmjy-gpk05",
     "username": "cade",
     "password": "123",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsbGZ2MzNiMi16emo5OSIsImlhdCI6MTY5MjMyMDk5MCwiZXhwIjoxNjkyMzI0NTkwfQ.L3AfxIwRpMTyzP3RKYjtztw9misW1RaCrf2CyBhB3kc"
-  },
-  {
-    "id": "llfvcqfw-hzjav",
-    "username": "jake",
-    "password": "123"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsbGdra21qeS1ncGswNSIsImlhdCI6MTY5MjM2MTg5NSwiZXhwIjoxNjkyMzY1NDk1fQ.ezdB5VzvGvJEzT1sqBetq9vsF0yyMq4C74o6ofiCmEk"
   }
 ]
