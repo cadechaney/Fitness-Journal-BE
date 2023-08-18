@@ -5,6 +5,7 @@ const users = require('./users.json');
 const jwt = require('jsonwebtoken');
 const secretKey = 'your-secret-key';
 
+
 app.use(express.json()); // Add this line to parse JSON in the request body
 
 app.post('/users/login', (req, res) => {
@@ -109,6 +110,32 @@ app.delete('/stuff/:workoutId', (req, res) => {
       }
     }
   });
+});
+
+app.post('/users/signup', (req, res) => {
+  console.log(req.body);
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(400).json({ error: 'Username and password are required' });
+  }
+
+  // Generate a unique ID for the new user (you can use a library like 'uuid')
+  const newUserId = generateUniqueId(); // Make sure to define generateUniqueId()
+
+  const newUser = {
+    id: newUserId,
+    username,
+    password,
+  };
+
+  users.push(newUser);
+  updateUsersFile(users);
+
+  // Generate a JWT token with the user's ID
+  const token = jwt.sign({ userId: newUserId }, secretKey, { expiresIn: '1h' });
+
+  res.status(201).json({ message: 'User registered successfully', token, user: newUser });
 });
 
 app.listen(5000, () => {
