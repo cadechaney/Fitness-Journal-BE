@@ -144,7 +144,7 @@ app.post('/users/signup', (req, res) => {
 });
 
 app.delete('/users/:userId', (req, res) => {
-  const userId = req.params.userId;
+  const userName = req.params.userId;
 
   fs.readFile('./users.json', 'utf-8', (err, jsonString) => {
     if (err) {
@@ -154,7 +154,7 @@ app.delete('/users/:userId', (req, res) => {
       try {
         const existingData = JSON.parse(jsonString);
         
-        const index = existingData.findIndex(user => user.id === userId);
+        const index = existingData.findIndex(user => user.username === userName);
 
         if (index === -1) {
           return res.status(404).json({ error: 'User not found' });
