@@ -9,6 +9,17 @@
     "id": 2,
     "username": "yogaFire",
     "password": "eternalStretch",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjMwODU4MywiZXhwIjoxNjkyMzEyMTgzfQ.qNIrRQtdu1aApCuXPm_LsiunuzdrP4UQkvYgvw7iNWI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjMyMTEwMCwiZXhwIjoxNjkyMzI0NzAwfQ.msqXT_v3plD894UI6zWwtC7glR0dlZ0TzW3ufZh14u0"
+  },
+  {
+    "id": "llfv33b2-zzj99",
+    "username": "cade",
+    "password": "123",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsbGZ2MzNiMi16emo5OSIsImlhdCI6MTY5MjMyMDk5MCwiZXhwIjoxNjkyMzI0NTkwfQ.L3AfxIwRpMTyzP3RKYjtztw9misW1RaCrf2CyBhB3kc"
+  },
+  {
+    "id": "llfvcqfw-hzjav",
+    "username": "jake",
+    "password": "123"
   }
 ]
