@@ -4,7 +4,7 @@ const fs = require('fs');
 const users = require('./users.json');
 const jwt = require('jsonwebtoken');
 const secretKey = 'your-secret-key';
-
+const { generateUniqueId } = require('./utils'); 
 
 app.use(express.json()); // Add this line to parse JSON in the request body
 
