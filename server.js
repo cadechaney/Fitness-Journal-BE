@@ -120,6 +120,11 @@ app.post('/users/signup', (req, res) => {
     return res.status(400).json({ error: 'Username and password are required' });
   }
 
+  const existingUser = users.find(user => user.username === username);
+  if (existingUser) {
+    return res.status(409).json({ error: 'Username already exists' });
+  }
+
   // Generate a unique ID for the new user (you can use a library like 'uuid')
   const newUserId = generateUniqueId(); // Make sure to define generateUniqueId()
 
